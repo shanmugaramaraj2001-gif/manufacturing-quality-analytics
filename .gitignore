@@ -1,0 +1,20 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+secrets.*
+
+# Python
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Local data (only commit data that is approved for public release)
+data/
+*.csv
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
