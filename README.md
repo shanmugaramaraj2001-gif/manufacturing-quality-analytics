@@ -69,15 +69,41 @@ Dashboard components include:
 
 The dashboard is designed to help users explore quality performance and identify areas that may require further investigation.
 
-### Dashboard Preview
+## Power BI Dashboard Preview
 
-Add a screenshot of the completed Power BI dashboard here.
+The Aerospace Quality Executive Dashboard provides an overview of manufacturing quality performance through key performance indicators (KPIs), rejection trends, supplier analysis, machine-wise rejection analysis, and defect Pareto analysis.
 
-Suggested file location: `images/quality_dashboard.png`
+![Aerospace Quality Executive Dashboard](quality_dashboard.png)
 
-After adding the screenshot, use:
+### Key Performance Indicators
 
-`![Aerospace Quality Executive Dashboard](images/quality_dashboard.png)`
+| KPI                         |       Value |
+| --------------------------- | ----------: |
+| Inspection Records          |       2,000 |
+| Total Inspected             |     171,489 |
+| Total Rejected              |       9,709 |
+| Rejection Rate              |       5.66% |
+| Cost of Poor Quality (COPQ) | ₹462,632.32 |
+| Worst Supplier              | Supplier_12 |
+
+### Dashboard Components
+
+* **Monthly Rejection Rate Trend:** Tracks monthly rejection rates to identify fluctuations in quality performance.
+* **Supplier Rejection Analysis:** Compares supplier-wise rejected quantities to identify suppliers requiring further investigation.
+* **Machine-wise Rejected Quantity:** Compares rejected quantities across inspection machines.
+* **Pareto Analysis:** Ranks defect types by count and displays their cumulative percentage to highlight the most significant defect categories.
+* **Top Defect Types:** Highlights the defect categories with the highest rejection counts.
+
+### Interactive Filters
+
+The dashboard includes the following slicers for exploring the data:
+
+* Supplier Name
+* Inspector
+* Month
+* Machine ID
+
+These filters allow users to investigate quality performance across different suppliers, inspectors, months, and machines.
 
 ## SQL Analysis
 
