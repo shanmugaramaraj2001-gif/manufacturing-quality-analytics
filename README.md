@@ -30,17 +30,17 @@ This project analyzes a practice dataset to demonstrate how data analytics can s
 | Power BI         | Interactive dashboard and KPI visualization |
 | Jupyter Notebook | Python analysis workflow                    |
 
-## Key Performance Indicators
+## Key Findings from the Practice Dataset
 
-The following results were obtained from the practice dataset and validated during SQL analysis.
+The analysis of the practice dataset produced the following observations:
 
-| KPI                         |      Result |
-| --------------------------- | ----------: |
-| Inspection Records          |       2,000 |
-| Total Inspected Quantity    |     171,489 |
-| Total Rejected Quantity     |       9,709 |
-| Overall Rejection Rate      |       5.66% |
-| Total Rejection Cost (COPQ) | ₹462,632.32 |
+* **Overall rejection rate:** The calculated rejection rate is 5.66%, based on 9,709 rejected units out of 171,489 inspected units.
+* **Supplier performance:** Supplier_12 has the highest rejected quantity among the suppliers shown in the dashboard, with 821 rejected units.
+* **Monthly trend:** The rejection rate reaches its highest displayed value in June at 6.25%.
+* **Machine-level analysis:** CMM-04 has the highest rejected quantity among the five machines, with 2,036 rejected units.
+* **Defect analysis:** Scratch is the leading defect category in the displayed Pareto analysis, with 306 occurrences.
+
+These observations identify areas that could warrant further investigation in a manufacturing quality environment. They are based on practice data and should not be interpreted as findings about an actual company.
 
 ### Metric Definitions
 
@@ -136,18 +136,38 @@ The Jupyter Notebook supports the initial data-analysis workflow, including:
 
 ```text
 manufacturing-quality-analytics/
-│
 ├── README.md
 ├── .env.example
 ├── .gitignore
 ├── dashboard_documentation.md
 ├── quality_analysis.ipynb
-└── quality_analysis.sql
+├── quality_analysis.sql
+└── quality_dashboard.png
 ```
 
-The structure above reflects the files currently visible in the repository. Add the Power BI `.pbix` file and dashboard screenshot if they are not already included.
+**File descriptions:**
+
+* `README.md` — Project overview, results, dashboard preview, and setup instructions.
+* `.env.example` — Example environment configuration.
+* `.gitignore` — Specifies files excluded from version control.
+* `dashboard_documentation.md` — Documentation for the Power BI dashboard.
+* `quality_analysis.ipynb` — Python-based data inspection and analysis.
+* `quality_analysis.sql` — SQL queries for manufacturing quality analysis.
+* `quality_dashboard.png` — Screenshot of the completed Power BI dashboard.
+
+The repository includes a dashboard screenshot for preview. The editable Power BI `.pbix` report file is not currently listed in the repository structure.
 
 ## How to Run the Project
+
+### Before You Begin
+
+This repository contains the Python notebook, SQL analysis script, dashboard documentation, and a dashboard screenshot.
+
+To reproduce the analysis, you will also need the practice inspection dataset used by the notebook and SQL queries. The notebook expects a CSV file named `inspection_data.csv`; update its file path if your dataset is stored elsewhere.
+
+For SQL analysis, create the `aerospace_quality` database and load the dataset into a table named `inspection_data`, or adjust the SQL script to match your database and table names.
+
+The repository currently provides a dashboard screenshot for viewing. To interact with or modify the Power BI report, you will need the corresponding `.pbix` file if it is available separately.
 
 ### 1. Python
 
